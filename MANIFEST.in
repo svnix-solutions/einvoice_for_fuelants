@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include einvoice_for_fuelants *.css
+recursive-include einvoice_for_fuelants *.csv
+recursive-include einvoice_for_fuelants *.html
+recursive-include einvoice_for_fuelants *.ico
+recursive-include einvoice_for_fuelants *.js
+recursive-include einvoice_for_fuelants *.json
+recursive-include einvoice_for_fuelants *.md
+recursive-include einvoice_for_fuelants *.png
+recursive-include einvoice_for_fuelants *.py
+recursive-include einvoice_for_fuelants *.svg
+recursive-include einvoice_for_fuelants *.txt
+recursive-exclude einvoice_for_fuelants *.pyc
