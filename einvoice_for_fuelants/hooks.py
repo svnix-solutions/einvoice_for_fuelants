@@ -7,6 +7,11 @@ app_description = "e-Invoicing for fuelants streamlines fuel transaction managem
 app_email = "contact@svnix.solutions"
 app_license = "GPLv3"
 
+override_whitelisted_methods = {
+    "india_compliance.gst_india.utils.e_invoice.generate_e_invoice": 
+        "einvoice_for_fuelants.einvoice_for_fuelants.patches.fuelants.generate_e_invoice"
+}
+
 # Includes in <head>
 # ------------------
 
