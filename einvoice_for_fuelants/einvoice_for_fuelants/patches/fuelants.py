@@ -98,10 +98,8 @@ def generate_e_invoice(docname, throw=True, force=False):
             raise GatewayTimeoutError
 
         # Fetch data from the document
-        E_Invoice_Data  = EInvoiceData(doc).get_data()
-        data = process_items_and_update_data(E_Invoice_Data)
-          # Print data to inspect it before sending it to the API
-        print("Data to send to API: ", json.dumps(data, indent=4))
+        e_invoice_data  = EInvoiceData(doc).get_data()
+        data = process_items_and_update_data(e_invoice_data)
         api = EInvoiceAPI(doc)
         result = api.generate_irn(data)
 
