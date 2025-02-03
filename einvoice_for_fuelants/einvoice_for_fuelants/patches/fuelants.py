@@ -75,6 +75,11 @@ def process_items_and_update_data(data):
     val_dtls["OthChrg"] += adjustment
     val_dtls["AssVal"] -= adjustment
     val_dtls["Discount"] = 0
+    buyer_dtls = data["BuyerDtls"]
+    data["ShipDtls"]["LglNm"] = buyer_dtls["LglNm"]
+    data["ShipDtls"]["TrdNm"] = buyer_dtls["TrdNm"]
+    if data["ShipDtls"]["Gstin"] == "URP":
+        data["ShipDtls"]["Gstin"] = None
 
     # Update ItemList with remaining items and reassign SlNo
     data["ItemList"] = [{**item, "SlNo": str(idx)} for idx, item in enumerate(remaining_items, start=1)]
