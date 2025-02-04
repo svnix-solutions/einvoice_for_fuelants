@@ -12,6 +12,8 @@ override_whitelisted_methods = {
         "einvoice_for_fuelants.einvoice_for_fuelants.patches.fuelants.generate_e_invoice"
 }
 
+app_include_css = "/assets/einvoice_for_fuelants/css/einvoice_for_fuelants.css"
+
 # Includes in <head>
 # ------------------
 

@@ -1,0 +1,5 @@
+button[data-label="Create%20Workspace"],
+button[data-label="Edit"] {
+    display: none !important;
+    visibility: hidden !important;
+}
